@@ -1,0 +1,14 @@
+.about-container{
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+b{
+    font-weight: 900;
+    font-family: initial;
+}
+
+.read-more{
+    padding: 10px;
+    margin: 0;
+}

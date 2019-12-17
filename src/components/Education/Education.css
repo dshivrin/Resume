@@ -1,0 +1,12 @@
+.education-card {
+  background-color: #333;
+  color: white;
+}
+
+.education-logo {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
+}

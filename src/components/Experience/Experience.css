@@ -1,0 +1,13 @@
+.company-logo {
+  height: 250px;
+}
+
+.card-title{
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .company-logo {
+    height: initial;
+  }
+}

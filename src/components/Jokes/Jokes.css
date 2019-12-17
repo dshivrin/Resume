@@ -1,0 +1,13 @@
+.jokes {
+  margin-bottom: 20px;
+}
+
+.btn.read-more {
+  background: #eaeaea;
+  color: #333;
+}
+
+.btn.read-more:hover {
+  background: #333;
+  color: #fff;
+}

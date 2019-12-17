@@ -1,0 +1,182 @@
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: 0.5em 0;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+#showcase {
+  color: #fff;
+  text-align: center;
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: #333 url("../../assets/bg-2.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 480px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 0 1.5em;
+}
+
+.content-wrap {
+  padding-bottom: 20px;
+}
+
+.profile-image {
+  display: initial;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+#section-a {
+  background: #eaeaea;
+  color: #333;
+  padding-bottom: 2em;
+}
+
+#experience {
+  padding: 40px;
+}
+
+#experience ul,
+#education ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#experience li,
+#education li {
+  margin-bottom: 2em;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+}
+.comapny-logo {
+  height: 200px;
+}
+
+.card {
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 1.5em;
+}
+
+#section-a {
+  background: #fff;
+  color: #333;
+  padding: 2em;
+}
+
+#education,
+#about {
+  background: #eaeaea;
+  color: #333;
+  padding: 2em;
+}
+
+#contact {
+  background-color: #fff;
+  color: #000;
+}
+
+#main-footer {
+  padding: 1.5em;
+  color: #000;
+  background: #fff;
+  text-align: center;
+}
+
+#main-footer a {
+  color: #2690d4;
+  text-decoration: none;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .content-wrap,
+  #experience ul {
+    grid-column: 2/4;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card-content p {
+    text-align: left;
+  }
+  .card-title {
+    text-align: initial;
+  }
+
+  .box,
+  #main-footer div {
+    grid-column: span 2;
+  }
+
+  .education-card {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .comapny-logo,
+  .education-logo {
+    height: initial;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 25%;
+    max-width: 280px;
+    max-height: 320px;
+  }
+  .education-logo {
+    position: initial;
+    margin: initial;
+    padding: 20px;
+    max-height: 220px;
+  }
+  .contact-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .skill-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .contact-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
