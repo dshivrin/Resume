@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./Jokes.css";
 
-//todo: endless scroll for jokes
 class Jokes extends Component {
   state = { jokes: [], joke: "" };
 
   //async call after component nounted so it won't block the UI
   componentDidMount() {
     this.fetchOneJoke();
-    //this.fetchJokes();
   }
 
   fetchJokes = () => {
@@ -17,7 +15,12 @@ class Jokes extends Component {
         return response.json();
       })
       .then(json => {
-        this.setState({ jokes: json });
+        let jokes = this.state.jokes;
+        if(json){
+          let set = new Set(jokes.concat(json));
+          jokes = Array.from(set);
+        }
+        this.setState({ jokes });
       })
       .catch(error => console.log(error));
   };
@@ -37,21 +40,25 @@ class Jokes extends Component {
     const jokes = this.state.jokes;
 
     return (
-      <div>
+      <div className="container">
         <h2>Programming jokes, dad jokes etc..</h2>
-        <div>
+        <div className="joke">
           {this.state.joke.setup} <em>{this.state.joke.punchline}</em>
         </div>
+        <hr />
         <div className="jokes">
           {jokes.map(joke => {
             return (
-              <div key={joke.id}>
+              <div className="joke" key={joke.id}>
                 {joke.setup} <em>{joke.punchline}</em>
+                <hr />
               </div>
             );
           })}
         </div>
-        <button onClick={this.fetchJokes} className="btn read-more">Read more</button>
+        <button onClick={this.fetchJokes} className="btn read-more">
+          Read more
+        </button>
       </div>
     );
   }

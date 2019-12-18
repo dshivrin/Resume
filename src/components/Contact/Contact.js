@@ -18,7 +18,7 @@ const Contact = () => {
     <div>
       <h2>Contact me!</h2>
       <div className="contact-list">
-        <div>
+        <div className="phone">
           <img
             src={phone_icon}
             alt="contact-icon"
