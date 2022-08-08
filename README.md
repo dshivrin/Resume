@@ -1,3 +1,7 @@
+This project is depricated, please see the new version here
+https://github.com/dshivrin/Portfolio
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
